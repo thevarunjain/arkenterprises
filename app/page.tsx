@@ -1,7 +1,7 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Ark Enterprises</h1>
-    </main>
-  )
+"use client"
+
+import Certifications from "../components/certifications"
+
+export default function SyntheticV0PageForDeployment() {
+  return <Certifications />
 }
