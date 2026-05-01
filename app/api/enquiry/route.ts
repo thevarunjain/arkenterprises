@@ -24,7 +24,11 @@ export async function POST(req: NextRequest) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: params.toString(),
     })
+    const text = await res.text()
     console.log("[enquiry] google response status:", res.status)
+    console.log("[enquiry] google response headers:", JSON.stringify(Object.fromEntries(res.headers.entries())))
+    console.log("[enquiry] google response body (first 500):", text.slice(0, 500))
+    console.log("[enquiry] params sent:", params.toString())
     return NextResponse.json({ ok: true, status: res.status })
   } catch (err) {
     console.error("[enquiry] google fetch error:", err)
