@@ -9,16 +9,20 @@ export default function Contact() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
-    const data = new FormData(e.currentTarget)
+    const formsubmitData = new FormData(e.currentTarget)
+    formsubmitData.append("_cc", "ark0805enterprises@gmail.com")
+
+    const formspreeData = new FormData(e.currentTarget)
+
     await Promise.all([
       fetch("https://formsubmit.co/varunsj18@gmail.com", {
         method: "POST",
-        body: data,
+        body: formsubmitData,
         headers: { Accept: "application/json" },
       }),
       fetch("https://formspree.io/f/mjglvdbe", {
         method: "POST",
-        body: data,
+        body: formspreeData,
         headers: { Accept: "application/json" },
       }),
     ])
@@ -52,7 +56,6 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input type="hidden" name="_cc" value="ark0805enterprises@gmail.com" />
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-medium text-gray-700 block mb-1">Name</label>
