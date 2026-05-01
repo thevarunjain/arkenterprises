@@ -1,17 +1,18 @@
 import { NextRequest, NextResponse } from "next/server"
 
-const FORM_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScnn5T5OrQ7F3qFV7Q5sTSAMzW1EgkQjRnIFYBCDkfG7f53mw/formResponse"
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScnn5T5OrQ7F3qFV7Q5sTSAMzW1EgkQjRnIFYBCDkfG7f53mw/formResponse"
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
   console.log("[enquiry] received:", JSON.stringify(body))
 
   const params = new URLSearchParams({
-    "entry.2005620554": body.name ?? "",
-    "entry.1045781291": body.email ?? "",
-    "entry.1065046570": body.address ?? "",
-    "entry.1166974658": body.phone ?? "",
-    "entry.839337160": body.message ?? "",
+    "emailAddress": body.email ?? "",
+    "entry.1633920210": body.name ?? "",
+    "entry.227649005": body.email ?? "",
+    "entry.790080973": body.address ?? "",
+    "entry.1770822543": body.phone ?? "",
+    "entry.1846923513": body.message ?? "",
     "fvv": "1",
     "pageHistory": "0",
     "fbzx": "6582853857070841925",
