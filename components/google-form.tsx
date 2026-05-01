@@ -2,49 +2,32 @@
 
 import { useState } from "react"
 
-const FORM_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScnn5T5OrQ7F3qFV7Q5sTSAMzW1EgkQjRnIFYBCDkfG7f53mw/formResponse"
-
 export default function GoogleForm() {
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    setLoading(true)
     const f = e.currentTarget
 
-    const iframe = document.createElement("iframe")
-    iframe.name = "hidden-gform-target"
-    iframe.style.display = "none"
-    document.body.appendChild(iframe)
-
-    const form = document.createElement("form")
-    form.method = "POST"
-    form.action = FORM_URL
-    form.target = "hidden-gform-target"
-
-    const fields: Record<string, string> = {
-      "entry.1633920210": (f.elements.namedItem("name") as HTMLInputElement).value,
-      "entry.227649005": (f.elements.namedItem("email") as HTMLInputElement).value,
-      "entry.790080973": (f.elements.namedItem("address") as HTMLInputElement).value,
-      "entry.1770822543": (f.elements.namedItem("phone") as HTMLInputElement).value,
-      "entry.1846923513": (f.elements.namedItem("message") as HTMLTextAreaElement).value,
-      "fvv": "1",
-      "pageHistory": "0",
-      "fbzx": "6582853857070841925",
+    const payload = {
+      name: (f.elements.namedItem("name") as HTMLInputElement).value,
+      email: (f.elements.namedItem("email") as HTMLInputElement).value,
+      address: (f.elements.namedItem("address") as HTMLInputElement).value,
+      phone: (f.elements.namedItem("phone") as HTMLInputElement).value,
+      message: (f.elements.namedItem("message") as HTMLTextAreaElement).value,
     }
 
-    for (const [name, value] of Object.entries(fields)) {
-      const input = document.createElement("input")
-      input.type = "hidden"
-      input.name = name
-      input.value = value
-      form.appendChild(input)
-    }
+    const res = await fetch("/api/enquiry", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
 
-    document.body.appendChild(form)
-    form.submit()
-    document.body.removeChild(form)
-
-    setTimeout(() => document.body.removeChild(iframe), 3000)
+    const data = await res.json()
+    console.log("[form] api response:", data)
+    setLoading(false)
     setSent(true)
   }
 
@@ -87,8 +70,8 @@ export default function GoogleForm() {
                 <label className="text-xs font-medium text-gray-700 block mb-1">Message</label>
                 <textarea name="message" rows={4} className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none" placeholder="Describe your requirement..." />
               </div>
-              <button type="submit" className="w-full bg-black text-white py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
-                Submit Enquiry
+              <button type="submit" disabled={loading} className="w-full bg-black text-white py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors disabled:opacity-60">
+                {loading ? "Submitting..." : "Submit Enquiry"}
               </button>
             </form>
           )}
