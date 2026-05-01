@@ -4,6 +4,20 @@ import { useState } from "react"
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+    const data = new FormData(e.currentTarget)
+    await fetch("https://formspree.io/f/mjglvdbe", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    })
+    setLoading(false)
+    setSent(true)
+  }
 
   return (
     <section id="contact" className="py-24 px-6 bg-white">
@@ -30,34 +44,31 @@ export default function Contact() {
               </div>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true) }}
-              className="space-y-4"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-medium text-gray-700 block mb-1">Name</label>
-                  <input required className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="Your name" />
+                  <input required name="name" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="Your name" />
                 </div>
                 <div>
                   <label className="text-xs font-medium text-gray-700 block mb-1">Company</label>
-                  <input className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="Company name" />
+                  <input name="company" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="Company name" />
                 </div>
               </div>
               <div>
                 <label className="text-xs font-medium text-gray-700 block mb-1">Email</label>
-                <input required type="email" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="you@company.com" />
+                <input required name="email" type="email" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="you@company.com" />
               </div>
               <div>
                 <label className="text-xs font-medium text-gray-700 block mb-1">Phone</label>
-                <input className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="+91 00000 00000" />
+                <input name="phone" className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400" placeholder="+91 00000 00000" />
               </div>
               <div>
                 <label className="text-xs font-medium text-gray-700 block mb-1">Message</label>
-                <textarea required rows={4} className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none" placeholder="Describe your requirement..." />
+                <textarea required name="message" rows={4} className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none" placeholder="Describe your requirement..." />
               </div>
-              <button type="submit" className="w-full bg-black text-white py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
-                Send Message
+              <button type="submit" disabled={loading} className="w-full bg-black text-white py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors disabled:opacity-60">
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}
