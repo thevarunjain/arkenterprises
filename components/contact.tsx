@@ -10,11 +10,18 @@ export default function Contact() {
     e.preventDefault()
     setLoading(true)
     const data = new FormData(e.currentTarget)
-    await fetch("https://formsubmit.co/varunsj18@gmail.com", {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" },
-    })
+    await Promise.all([
+      fetch("https://formsubmit.co/varunsj18@gmail.com", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      }),
+      fetch("https://formspree.io/f/mjglvdbe", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      }),
+    ])
     setLoading(false)
     setSent(true)
   }
