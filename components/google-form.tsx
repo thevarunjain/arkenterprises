@@ -76,6 +76,22 @@ export default function GoogleForm() {
             </form>
           )}
         </div>
+
+        <div className="mt-12">
+          <p className="text-center text-sm text-gray-400 mb-4">Or fill directly via Google Form</p>
+          <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScnn5T5OrQ7F3qFV7Q5sTSAMzW1EgkQjRnIFYBCDkfG7f53mw/viewform?embedded=true"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+            >
+              Loading…
+            </iframe>
+          </div>
+        </div>
       </div>
     </section>
   )
