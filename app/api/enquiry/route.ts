@@ -7,7 +7,6 @@ export async function POST(req: NextRequest) {
   console.log("[enquiry] received:", JSON.stringify(body))
 
   const params = new URLSearchParams({
-    "emailAddress": body.email ?? "",
     "entry.1633920210": body.name ?? "",
     "entry.227649005": body.email ?? "",
     "entry.790080973": body.address ?? "",
