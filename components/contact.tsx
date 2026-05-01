@@ -45,6 +45,7 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              <input type="hidden" name="_cc" value="ark0805enterprises@gmail.com" />
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-medium text-gray-700 block mb-1">Name</label>
