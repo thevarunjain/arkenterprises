@@ -7,7 +7,6 @@ import About from "../components/about"
 import Certifications from "../components/certifications"
 import Gallery from "../components/gallery"
 import Contact from "../components/contact"
-import GoogleForm from "../components/google-form"
 import Footer from "../components/footer"
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Certifications />
       <Gallery />
       <Contact />
-      <GoogleForm />
       <Footer />
     </main>
   )
