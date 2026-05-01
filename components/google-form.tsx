@@ -18,6 +18,10 @@ export default function GoogleForm() {
       "entry.790080973": (f.elements.namedItem("address") as HTMLInputElement).value,
       "entry.1770822543": (f.elements.namedItem("phone") as HTMLInputElement).value,
       "entry.1846923513": (f.elements.namedItem("message") as HTMLTextAreaElement).value,
+      "fvv": "1",
+      "pageHistory": "0",
+      "fbzx": "6582853857070841925",
+      "submissionTimestamp": "-1",
     })
     try {
       await fetch(FORM_URL, { method: "POST", body, mode: "no-cors" })
