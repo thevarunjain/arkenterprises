@@ -20,7 +20,12 @@ export async function POST(req: NextRequest) {
   try {
     const res = await fetch(FORM_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Referer": "https://docs.google.com/forms/d/e/1FAIpQLScnn5T5OrQ7F3qFV7Q5sTSAMzW1EgkQjRnIFYBCDkfG7f53mw/viewform",
+        "Origin": "https://docs.google.com",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      },
       body: params.toString(),
     })
     const text = await res.text()
