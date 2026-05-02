@@ -6,7 +6,7 @@ export default function Hero() {
           Trusted Industrial Supplier
         </span>
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-          Supplying Quality.<br />Delivering Reliability.
+          You Demand.<br />We Deliver.
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-10">
           Ark Enterprises is a leading supplier of industrial goods, raw materials, and equipment. We serve manufacturers, contractors, and businesses across industries with competitive pricing and on-time delivery.
