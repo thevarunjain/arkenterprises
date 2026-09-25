@@ -24,7 +24,7 @@ export default function ProductCatalogPreview() {
             <a
               key={category}
               href={`/products?category=${encodeURIComponent(category)}`}
-              className="group flex min-h-16 items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-sky-300 hover:bg-sky-50 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+              className="group flex min-h-16 items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-gray-400 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             >
               <span className="font-medium text-gray-800 group-hover:text-gray-950">{category}</span>
               <ArrowUpRight size={17} aria-hidden="true" className="shrink-0 text-gray-400 transition-colors group-hover:text-sky-700" />

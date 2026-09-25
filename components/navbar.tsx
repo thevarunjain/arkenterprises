@@ -5,11 +5,9 @@ import { Facebook, Instagram, Menu, X } from "lucide-react"
 import XBrandIcon from "./x-brand-icon"
 
 const links = [
-  { label: "Home", href: "/#home" },
   { label: "About Us", href: "/#about" },
   { label: "Certifications & Compliance", href: "/#certifications" },
   { label: "What We Offer", href: "/#services" },
-  { label: "Contact Us", href: "/#contact" },
   { label: "Products", href: "/products" },
 ]
 
@@ -41,7 +39,7 @@ export default function Navbar() {
         </div>
 
         <a href="/#contact" className="hidden md:inline-flex items-center px-4 py-2 bg-black text-white text-sm rounded-md hover:bg-gray-800 transition-colors">
-          Get a Quote
+          Contact Us
         </a>
 
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -56,7 +54,7 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <a href="/#contact" className="text-sm font-medium text-black">Get a Quote →</a>
+          <a href="/#contact" onClick={() => setOpen(false)} className="text-sm font-medium text-black">Contact Us →</a>
         </div>
       )}
     </nav>

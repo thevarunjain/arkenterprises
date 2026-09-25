@@ -3,6 +3,14 @@
 import { useEffect, useMemo, useState } from "react"
 import { products, productCategories, type Product } from "../data/products"
 
+const letterColors = [
+  "bg-sky-100 text-sky-800",
+  "bg-emerald-100 text-emerald-800",
+  "bg-amber-100 text-amber-900",
+  "bg-violet-100 text-violet-800",
+  "bg-rose-100 text-rose-800",
+]
+
 export default function ProductCatalog() {
   const [category, setCategory] = useState("All Materials")
   const [query, setQuery] = useState("")
@@ -96,7 +104,9 @@ export default function ProductCatalog() {
           <div className="mt-3 grid gap-x-12 md:grid-cols-2">
             {Object.entries(groups).map(([initial, items]) => (
               <section key={initial} aria-labelledby={`letter-${initial}`}>
-                <h2 id={`letter-${initial}`} className="border-b border-gray-300 py-3 text-lg font-semibold text-gray-900">{initial}</h2>
+                <h2 id={`letter-${initial}`} className="border-b border-gray-300 py-3 text-lg font-semibold text-gray-900">
+                  <span className={`inline-grid h-8 w-8 place-items-center rounded-md ${letterColors[initial.charCodeAt(0) % letterColors.length]}`}>{initial}</span>
+                </h2>
                 <ul>
                   {items.map((product) => (
                     <li key={`${product.category}-${product.name}`} className="flex items-center justify-between gap-4 border-b border-gray-200 py-3">
