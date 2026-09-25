@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <a href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight">
-          <img src="/ark-logo.png" alt="" aria-hidden="true" className="h-10 w-10 object-contain" />
+          <img src="/ark-enterprises-logo.png" alt="" aria-hidden="true" className="h-10 w-10 object-contain" />
           <span>Ark Enterprises</span>
         </a>
 

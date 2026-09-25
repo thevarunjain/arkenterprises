@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: 'ARK Enterprises — Nutraceutical and food ingredient supplier.',
   generator: 'v0.app',
   icons: {
-    icon: '/ark-logo.png',
-    apple: '/ark-logo.png',
+    icon: '/ark-enterprises-logo.png',
+    apple: '/ark-enterprises-logo.png',
   },
 }
 

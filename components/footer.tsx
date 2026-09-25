@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         <div>
           <div className="mb-2 flex items-center gap-3 text-white">
-            <img src="/ark-logo.png" alt="" aria-hidden="true" className="h-12 w-12 object-contain" />
+            <img src="/ark-enterprises-logo.png" alt="" aria-hidden="true" className="h-12 w-12 object-contain" />
             <span className="text-lg font-bold">Ark Enterprises</span>
           </div>
           <p className="text-sm max-w-xs">Reliable industrial supplier serving businesses across India since 2023.</p>
