@@ -4,35 +4,38 @@ export default function About() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
           <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">About Us</span>
-          <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-6">A Supplier You Can Count On</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-6">A Trusted Supplier for Nutraceuticals &amp; Raw Materials</h2>
           <p className="text-gray-500 mb-4">
-            Founded over 15 years ago, Ark Enterprises has grown from a local trading firm into a trusted industrial supplier serving clients across the country. We specialize in bridging the gap between manufacturers and businesses that need a reliable, single-point supply partner.
+            ARK Enterprises is a trusted supplier and trading company engaged in Nutraceuticals, Raw Material. We cater to the requirements of nutraceutical, food, dietary supplement and related industries by sourcing and supplying quality raw materials from reliable manufacturers and suppliers.
           </p>
-          <p className="text-gray-500 mb-8">
-            Our team of sourcing experts, logistics coordinators, and account managers work together to ensure every order is fulfilled accurately and on time. We believe in building long-term partnerships, not just transactions.
+          <p className="text-gray-500 mb-4">
+            Our product portfolio includes Nutraceutical Ingredients and Food Ingredients. At ARK Enterprises, we focus on providing:
           </p>
-          <ul className="space-y-3">
-            {["Pan-India delivery network", "Verified supplier base", "Dedicated account managers", "Flexible credit terms"].map((item) => (
+          <ul className="space-y-3 mb-6">
+            {["Quality-oriented products", "Reliable sourcing", "Competitive pricing", "Timely supply", "Customer-focused service"].map((item) => (
               <li key={item} className="flex items-center gap-3 text-sm text-gray-700">
                 <span className="w-1.5 h-1.5 rounded-full bg-black inline-block" />
                 {item}
               </li>
             ))}
           </ul>
+          <p className="text-gray-500 mb-4">
+            Our objective is to build long-term business relationships by providing dependable products and professional service.
+          </p>
+          <p className="font-semibold text-gray-900">
+            ARK Enterprises – One Stop Solution for all your Nutraceutical Products Requirement.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          {[
-            { label: "Products Supplied", value: "1,200+" },
-            { label: "Industry Sectors", value: "12+" },
-            { label: "Orders Fulfilled", value: "50,000+" },
-            { label: "Vendor Partners", value: "300+" },
-          ].map(({ label, value }) => (
-            <div key={label} className="bg-white rounded-xl p-6 border border-gray-200">
-              <div className="text-2xl font-bold text-gray-900">{value}</div>
-              <div className="text-sm text-gray-500 mt-1">{label}</div>
-            </div>
-          ))}
+        <div className="rounded-xl border border-gray-200 bg-white p-8 md:p-10">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">Our Product Portfolio</span>
+          <h3 className="mt-4 text-2xl font-bold text-gray-900">Ingredients for growing industries</h3>
+          <p className="mt-3 leading-7 text-gray-500">Sourcing and supply support for nutraceutical, food, dietary supplement and related businesses.</p>
+          <div className="mt-8 space-y-3">
+            {["Nutraceutical Ingredients", "Food Ingredients", "Raw Materials"].map((item) => (
+              <div key={item} className="rounded-lg bg-gray-50 px-4 py-3 text-sm font-medium text-gray-800">{item}</div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

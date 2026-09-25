@@ -36,12 +36,30 @@ export default function Contact() {
         <div>
           <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">Contact Us</span>
           <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-6">Let's Talk Business</h2>
-          <p className="text-gray-500 mb-8">Reach out for pricing, bulk orders, custom sourcing requirements, or to set up a supply agreement.</p>
+          <p className="text-gray-500 mb-8">We would be happy to assist you with your requirements for Nutraceuticals and Food Ingredients.</p>
 
           <div className="space-y-4 text-sm text-gray-600">
-            <div><span className="font-medium text-gray-900">Email</span><br />info@arkenterprises.in</div>
-            <div><span className="font-medium text-gray-900">Phone</span><br />+91 98765 43210</div>
-            <div><span className="font-medium text-gray-900">Address</span><br />123 Industrial Area, Phase II<br />Mumbai, Maharashtra 400001</div>
+            <div>
+              <span className="font-medium text-gray-900">ARK Enterprises</span>
+            </div>
+            <div>
+              <span className="font-medium text-gray-900">Address</span><br />
+              Shop No. 15, E-10-11-12, Ground Floor,<br />
+              Triveni Complex, Laxmi Nagar, East Delhi,<br />
+              New Delhi – 110092, India
+            </div>
+            <div>
+              <span className="font-medium text-gray-900">Phone</span><br />
+              <a className="hover:text-gray-900" href="tel:+918383858342">+91 8383858342</a>
+              {" / "}
+              <a className="hover:text-gray-900" href="tel:+918818882225">+91 8818882225</a>
+            </div>
+            <div>
+              <span className="font-medium text-gray-900">Email</span><br />
+              <a className="hover:text-gray-900" href="mailto:info@arkenterprises.in">info@arkenterprises.in</a><br />
+              <a className="hover:text-gray-900" href="mailto:ark0805enterprises@gmail.com">ark0805enterprises@gmail.com</a>
+            </div>
+            <p>For product enquiries, quotations, samples or bulk requirements, please contact our team.</p>
           </div>
         </div>
 
