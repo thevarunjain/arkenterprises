@@ -4,7 +4,14 @@ import { useState } from "react"
 import { Facebook, Instagram, Menu, X } from "lucide-react"
 import XBrandIcon from "./x-brand-icon"
 
-const links = ["Services", "About", "Certifications", "Contact"]
+const links = [
+  { label: "Home", href: "/#home" },
+  { label: "About Us", href: "/#about" },
+  { label: "Certifications & Compliance", href: "/#certifications" },
+  { label: "What We Offer", href: "/#services" },
+  { label: "Contact Us", href: "/#contact" },
+  { label: "Products", href: "/products" },
+]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -18,10 +25,10 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden md:flex gap-8">
-          {links.map((l) => (
-            <li key={l}>
-              <a href={`/#${l.toLowerCase()}`} className="text-sm text-gray-600 hover:text-black transition-colors">
-                {l}
+          {links.map(({ label, href }) => (
+            <li key={label}>
+              <a href={href} className="text-sm text-gray-600 hover:text-black transition-colors">
+                {label}
               </a>
             </li>
           ))}
@@ -44,9 +51,9 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
-          {links.map((l) => (
-            <a key={l} href={`/#${l.toLowerCase()}`} onClick={() => setOpen(false)} className="text-sm text-gray-700">
-              {l}
+          {links.map(({ label, href }) => (
+            <a key={label} href={href} onClick={() => setOpen(false)} className="text-sm text-gray-700">
+              {label}
             </a>
           ))}
           <a href="/#contact" className="text-sm font-medium text-black">Get a Quote →</a>

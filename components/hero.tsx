@@ -1,27 +1,20 @@
+import ProductCatalogPreview from "./product-catalog-preview"
+
 export default function Hero() {
   const yearsExperience = new Date().getFullYear() - 2023
 
   return (
-    <section className="pt-32 pb-24 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="home" className="pt-32 pb-24 px-6 bg-gray-50">
+      <div className="max-w-6xl mx-auto text-center">
         <span className="inline-block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">
-          Trusted Industrial Supplier
+          Nutraceutical &amp; Food Ingredients
         </span>
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-sky-400 mb-6">
           Nourishing Health, Naturally
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-10">
-          Ark Enterprises is a leading supplier of industrial goods, raw materials, and equipment. We serve manufacturers, contractors, and businesses across industries with competitive pricing and on-time delivery.
+          One Stop Solution for all your Nutraceutical Products Requirement.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" className="px-6 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
-            Request a Quote
-          </a>
-          <a href="#services" className="px-6 py-3 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:border-gray-500 transition-colors">
-            Our Services
-          </a>
-        </div>
-
         <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
           {[["150+", "Clients Served"], [`${yearsExperience}+`, "Years Experience"], ["99%", "On-Time Delivery"]].map(([stat, label]) => (
             <div key={label}>
@@ -30,6 +23,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
+        <ProductCatalogPreview />
       </div>
     </section>
   )
