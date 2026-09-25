@@ -25,7 +25,7 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8">
           {links.map(({ label, href }) => (
             <li key={label}>
-              <a href={href} className="text-sm text-gray-600 hover:text-black transition-colors">
+              <a href={href} className="text-sm text-gray-600 hover:text-sky-700 transition-colors">
                 {label}
               </a>
             </li>
@@ -33,12 +33,12 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:flex items-center gap-3" aria-label="Social media">
-          <a href="https://www.instagram.com/ark0805enterprises/" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-black transition-colors"><Instagram size={18} /></a>
-          <a href="https://www.facebook.com/profile.php?id=61594430831439" aria-label="Facebook" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-black transition-colors"><Facebook size={18} /></a>
-          <a href="https://x.com/ARK080587" aria-label="X" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-black transition-colors"><XBrandIcon size={16} /></a>
+          <a href="https://www.instagram.com/ark0805enterprises/" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-700 transition-colors"><Instagram size={18} /></a>
+          <a href="https://www.facebook.com/profile.php?id=61594430831439" aria-label="Facebook" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-700 transition-colors"><Facebook size={18} /></a>
+          <a href="https://x.com/ARK080587" aria-label="X" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-sky-700 transition-colors"><XBrandIcon size={16} /></a>
         </div>
 
-        <a href="/#contact" className="hidden md:inline-flex items-center px-4 py-2 bg-black text-white text-sm rounded-md hover:bg-gray-800 transition-colors">
+          <a href="/#contact" className="hidden md:inline-flex items-center px-4 py-2 bg-sky-700 text-white text-sm rounded-md hover:bg-sky-800 transition-colors">
           Contact Us
         </a>
 
@@ -54,7 +54,7 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <a href="/#contact" onClick={() => setOpen(false)} className="text-sm font-medium text-black">Contact Us →</a>
+          <a href="/#contact" onClick={() => setOpen(false)} className="text-sm font-medium text-sky-800">Contact Us →</a>
         </div>
       )}
     </nav>

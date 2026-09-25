@@ -9,7 +9,7 @@ export default function Hero() {
         <span className="inline-block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">
           Nutraceutical &amp; Food Ingredients
         </span>
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-sky-400 mb-6">
+        <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-sky-700 mb-6">
           Nourishing Health, Naturally
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-10">

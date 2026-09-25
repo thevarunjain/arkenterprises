@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
       <Navbar />
       <main className="min-h-screen bg-white px-6 pt-24 pb-16">
         <article className="mx-auto max-w-3xl">
-          <a href="/" className="text-sm text-gray-500 hover:text-black">← Back to home</a>
+          <a href="/" className="text-sm text-gray-500 hover:text-sky-700">← Back to home</a>
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-gray-900">Privacy Policy</h1>
           <p className="mt-5 leading-7 text-gray-600">At ARK Enterprises, we respect your privacy and are committed to protecting the information you provide to us.</p>
           <div className="mt-10 space-y-8">
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
             ))}
           </div>
           <p className="mt-8 leading-7 text-gray-600">
-            If you have questions regarding this Privacy Policy, please contact us at <a href="mailto:info@arkenterprises.in" className="underline underline-offset-4 hover:text-black">info@arkenterprises.in</a>.
+            If you have questions regarding this Privacy Policy, please contact us at <a href="mailto:info@arkenterprises.in" className="underline underline-offset-4 hover:text-sky-700">info@arkenterprises.in</a>.
           </p>
         </article>
       </main>

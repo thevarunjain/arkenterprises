@@ -50,14 +50,14 @@ export default function Contact() {
             </div>
             <div>
               <span className="font-medium text-gray-900">Phone</span><br />
-              <a className="hover:text-gray-900" href="tel:+918383858342">+91 8383858342</a>
+              <a className="hover:text-sky-800" href="tel:+918383858342">+91 8383858342</a>
               {" / "}
-              <a className="hover:text-gray-900" href="tel:+918818882225">+91 8818882225</a>
+              <a className="hover:text-sky-800" href="tel:+918818882225">+91 8818882225</a>
             </div>
             <div>
               <span className="font-medium text-gray-900">Email</span><br />
-              <a className="hover:text-gray-900" href="mailto:info@arkenterprises.in">info@arkenterprises.in</a><br />
-              <a className="hover:text-gray-900" href="mailto:ark0805enterprises@gmail.com">ark0805enterprises@gmail.com</a>
+              <a className="hover:text-sky-800" href="mailto:info@arkenterprises.in">info@arkenterprises.in</a><br />
+              <a className="hover:text-sky-800" href="mailto:ark0805enterprises@gmail.com">ark0805enterprises@gmail.com</a>
             </div>
             <p>For product enquiries, quotations, samples or bulk requirements, please contact our team.</p>
           </div>
@@ -96,7 +96,7 @@ export default function Contact() {
                 <label className="text-xs font-medium text-gray-700 block mb-1">Message</label>
                 <textarea required name="message" rows={4} className="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none" placeholder="Describe your requirement..." />
               </div>
-              <button type="submit" disabled={loading} className="w-full bg-black text-white py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors disabled:opacity-60">
+              <button type="submit" disabled={loading} className="w-full bg-sky-700 text-white py-2.5 rounded-md text-sm font-medium hover:bg-sky-800 transition-colors disabled:opacity-60">
                 {loading ? "Sending..." : "Send Message"}
               </button>
             </form>

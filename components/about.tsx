@@ -14,7 +14,7 @@ export default function About() {
           <ul className="space-y-3 mb-6">
             {["Quality-oriented products", "Reliable sourcing", "Competitive pricing", "Timely supply", "Customer-focused service"].map((item) => (
               <li key={item} className="flex items-center gap-3 text-sm text-gray-700">
-                <span className="w-1.5 h-1.5 rounded-full bg-black inline-block" />
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-600 inline-block" />
                 {item}
               </li>
             ))}
@@ -27,13 +27,13 @@ export default function About() {
           </p>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-8 md:p-10">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">Our Product Portfolio</span>
+        <div className="rounded-xl border border-sky-100 bg-sky-50/60 p-8 md:p-10">
+          <span className="text-xs font-semibold uppercase tracking-widest text-sky-800">Our Product Portfolio</span>
           <h3 className="mt-4 text-2xl font-bold text-gray-900">Ingredients for growing industries</h3>
           <p className="mt-3 leading-7 text-gray-500">Sourcing and supply support for nutraceutical, food, dietary supplement and related businesses.</p>
           <div className="mt-8 space-y-3">
             {["Nutraceutical Raw Materials", "Food Raw Materials"].map((item) => (
-              <div key={item} className="rounded-lg bg-gray-50 px-4 py-3 text-sm font-medium text-gray-800">{item}</div>
+              <div key={item} className="rounded-lg bg-white px-4 py-3 text-sm font-medium text-gray-800">{item}</div>
             ))}
           </div>
         </div>

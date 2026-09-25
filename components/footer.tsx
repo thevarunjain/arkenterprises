@@ -25,26 +25,26 @@ export default function Footer() {
                 ["Contact Us", "/#contact"],
                 ["Products", "/products"],
               ].map(([label, href]) => (
-                <li key={label}><a href={href} className="hover:text-white transition-colors">{label}</a></li>
+                <li key={label}><a href={href} className="hover:text-sky-300 transition-colors">{label}</a></li>
               ))}
             </ul>
           </div>
           <div>
             <div className="text-white font-medium mb-3">Policies</div>
             <ul className="space-y-2">
-              <li><a href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</a></li>
-              <li><a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms &amp; Conditions</a></li>
-              <li><a href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</a></li>
+              <li><a href="/disclaimer" className="hover:text-sky-300 transition-colors">Disclaimer</a></li>
+              <li><a href="/privacy-policy" className="hover:text-sky-300 transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions" className="hover:text-sky-300 transition-colors">Terms &amp; Conditions</a></li>
+              <li><a href="/refund-policy" className="hover:text-sky-300 transition-colors">Refund Policy</a></li>
             </ul>
           </div>
           <div>
             <div className="text-white font-medium mb-3">Contact</div>
             <ul className="space-y-2 text-sm">
-              <li><a href="mailto:info@arkenterprises.in" className="hover:text-white transition-colors">info@arkenterprises.in</a></li>
-              <li><a href="mailto:ark0805enterprises@gmail.com" className="hover:text-white transition-colors">ark0805enterprises@gmail.com</a></li>
-              <li><a href="tel:+918383858342" className="hover:text-white transition-colors">+91 8383858342</a></li>
-              <li><a href="tel:+918818882225" className="hover:text-white transition-colors">+91 8818882225</a></li>
+              <li><a href="mailto:info@arkenterprises.in" className="hover:text-sky-300 transition-colors">info@arkenterprises.in</a></li>
+              <li><a href="mailto:ark0805enterprises@gmail.com" className="hover:text-sky-300 transition-colors">ark0805enterprises@gmail.com</a></li>
+              <li><a href="tel:+918383858342" className="hover:text-sky-300 transition-colors">+91 8383858342</a></li>
+              <li><a href="tel:+918818882225" className="hover:text-sky-300 transition-colors">+91 8818882225</a></li>
               <li>Shop No. 15, E-10-11-12, Ground Floor,<br />Triveni Complex, Laxmi Nagar,<br />East Delhi, New Delhi – 110092, India</li>
             </ul>
           </div>
@@ -52,9 +52,9 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto mt-8 flex gap-4" aria-label="Social media">
-        <a href="https://www.instagram.com/ark0805enterprises/" aria-label="Instagram" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Instagram size={18} /></a>
-        <a href="https://www.facebook.com/profile.php?id=61594430831439" aria-label="Facebook" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Facebook size={18} /></a>
-        <a href="https://x.com/ARK080587" aria-label="X" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><XBrandIcon size={16} /></a>
+        <a href="https://www.instagram.com/ark0805enterprises/" aria-label="Instagram" target="_blank" rel="noreferrer" className="hover:text-sky-300 transition-colors"><Instagram size={18} /></a>
+        <a href="https://www.facebook.com/profile.php?id=61594430831439" aria-label="Facebook" target="_blank" rel="noreferrer" className="hover:text-sky-300 transition-colors"><Facebook size={18} /></a>
+        <a href="https://x.com/ARK080587" aria-label="X" target="_blank" rel="noreferrer" className="hover:text-sky-300 transition-colors"><XBrandIcon size={16} /></a>
       </div>
 
       <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-gray-800 text-xs leading-6 text-gray-500">

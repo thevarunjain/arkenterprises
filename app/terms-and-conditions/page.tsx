@@ -51,7 +51,7 @@ export default function TermsAndConditionsPage() {
       <Navbar />
       <main className="min-h-screen bg-white px-6 pt-24 pb-16">
         <article className="mx-auto max-w-3xl">
-          <a href="/" className="text-sm text-gray-500 hover:text-black">← Back to home</a>
+          <a href="/" className="text-sm text-gray-500 hover:text-sky-700">← Back to home</a>
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-gray-900">Terms &amp; Conditions</h1>
           <p className="mt-5 text-gray-600">
             By accessing and using the ARK Enterprises website, you agree to comply with the following Terms &amp; Conditions.
@@ -65,7 +65,7 @@ export default function TermsAndConditionsPage() {
             ))}
           </div>
           <p className="mt-8 leading-7 text-gray-600">
-            For any questions regarding these Terms &amp; Conditions, please <a href="/#contact" className="underline underline-offset-4 hover:text-black">contact us</a>.
+            For any questions regarding these Terms &amp; Conditions, please <a href="/#contact" className="underline underline-offset-4 hover:text-sky-700">contact us</a>.
           </p>
         </article>
       </main>

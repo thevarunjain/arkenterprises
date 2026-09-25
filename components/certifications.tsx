@@ -17,7 +17,7 @@ export default function Certifications() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {certs.map(({ name, desc }, index) => (
             <div key={name} className={`flex gap-5 p-6 border border-gray-200 rounded-xl ${index === certs.length - 1 && certs.length % 2 === 1 ? "md:col-span-2 md:w-[calc(50%-0.75rem)] md:justify-self-center" : ""}`}>
-              <div className="w-12 h-12 shrink-0 bg-gray-900 text-white rounded-lg flex items-center justify-center text-xs font-bold text-center leading-tight px-1">
+              <div className="w-12 h-12 shrink-0 bg-sky-100 text-sky-800 rounded-lg flex items-center justify-center text-xs font-bold text-center leading-tight px-1">
                 {name.split(" ")[0]}
               </div>
               <div>

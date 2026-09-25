@@ -10,11 +10,11 @@ export default function ProductCatalogPreview() {
       <div>
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-widest text-green-800">Product catalogue</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-sky-800">Product catalogue</span>
             <h2 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">Find the materials you need</h2>
             <p className="mt-2 text-sm text-gray-600">Browse {uniqueProductCount}+ listed products by category, or open the complete A–Z directory.</p>
           </div>
-          <a href="/products" className="inline-flex w-fit items-center gap-2 rounded-md bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-gray-700">
+          <a href="/products" className="inline-flex w-fit items-center gap-2 rounded-md bg-sky-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-800">
             View full product list <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         </div>

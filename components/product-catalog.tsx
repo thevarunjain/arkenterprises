@@ -56,7 +56,7 @@ export default function ProductCatalog() {
     <section id="catalog" className="bg-gray-50 px-6 pb-16 pt-10 md:pb-20 md:pt-12">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <span className="text-xs font-semibold uppercase tracking-widest text-green-800">ARK Enterprises Product List</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-sky-800">ARK Enterprises Product List</span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">Browse Materials A–Z</h2>
           <p className="mt-2 text-gray-600">Browse by category or search by material name.</p>
         </div>
@@ -79,7 +79,7 @@ export default function ProductCatalog() {
                 type="button"
                 aria-pressed={category === item}
                 onClick={() => changeCategory(item)}
-                className={`shrink-0 rounded-full border px-3 py-1.5 text-xs transition-colors sm:text-sm ${category === item ? "border-gray-900 bg-gray-900 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-gray-500"}`}
+                className={`shrink-0 rounded-full border px-3 py-1.5 text-xs transition-colors sm:text-sm ${category === item ? "border-sky-700 bg-sky-700 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-sky-400"}`}
               >
                 {item}
               </button>

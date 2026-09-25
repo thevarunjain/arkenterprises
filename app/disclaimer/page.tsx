@@ -22,7 +22,7 @@ export default function DisclaimerPage() {
       <Navbar />
       <main className="min-h-screen bg-white px-6 pt-24 pb-16">
         <article className="mx-auto max-w-3xl">
-          <a href="/" className="text-sm text-gray-500 hover:text-black">← Back to home</a>
+          <a href="/" className="text-sm text-gray-500 hover:text-sky-700">← Back to home</a>
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-gray-900">Disclaimer</h1>
           <div className="mt-8 space-y-5">
             {paragraphs.map((paragraph) => (

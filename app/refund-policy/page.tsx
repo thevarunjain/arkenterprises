@@ -32,7 +32,7 @@ export default function RefundPolicyPage() {
       <Navbar />
       <main className="min-h-screen bg-white px-6 pt-24 pb-16">
         <article className="mx-auto max-w-3xl">
-          <a href="/" className="text-sm text-gray-500 hover:text-black">← Back to home</a>
+          <a href="/" className="text-sm text-gray-500 hover:text-sky-700">← Back to home</a>
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-gray-900">Refund Policy</h1>
           <p className="mt-5 leading-7 text-gray-600">At ARK Enterprises, we aim to provide quality products and reliable service to our customers.</p>
           <p className="mt-4 leading-7 text-gray-600">Since our business primarily deals in nutraceutical &amp; Food Ingredients the return, replacement or refund of products may depend on the nature of the product, order specifications and applicable commercial terms.</p>
@@ -49,8 +49,8 @@ export default function RefundPolicyPage() {
             <p className="mt-2 leading-7 text-gray-600">For any return, replacement or refund-related enquiry, please contact:</p>
             <div className="mt-3 space-y-1 leading-7 text-gray-600">
               <p>ARK Enterprises</p>
-              <p>Email: <a href="mailto:info@arkenterprises.in" className="underline underline-offset-4 hover:text-black">info@arkenterprises.in</a></p>
-              <p>Phone: <a href="tel:+918383858342" className="underline underline-offset-4 hover:text-black">+91 8383858342</a> / <a href="tel:+918818882225" className="underline underline-offset-4 hover:text-black">+91 8818882225</a></p>
+              <p>Email: <a href="mailto:info@arkenterprises.in" className="underline underline-offset-4 hover:text-sky-700">info@arkenterprises.in</a></p>
+              <p>Phone: <a href="tel:+918383858342" className="underline underline-offset-4 hover:text-sky-700">+91 8383858342</a> / <a href="tel:+918818882225" className="underline underline-offset-4 hover:text-sky-700">+91 8818882225</a></p>
             </div>
             <p className="mt-4 leading-7 text-gray-600">Each request will be reviewed individually based on the order details and applicable terms.</p>
           </section>
