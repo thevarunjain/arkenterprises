@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Facebook, Instagram, Menu, X } from "lucide-react"
 import XBrandIcon from "./x-brand-icon"
 
-const links = ["Services", "About", "Certifications", "Gallery", "Contact"]
+const links = ["Services", "About", "Certifications", "Contact"]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)

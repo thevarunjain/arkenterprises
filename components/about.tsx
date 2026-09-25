@@ -32,7 +32,7 @@ export default function About() {
           <h3 className="mt-4 text-2xl font-bold text-gray-900">Ingredients for growing industries</h3>
           <p className="mt-3 leading-7 text-gray-500">Sourcing and supply support for nutraceutical, food, dietary supplement and related businesses.</p>
           <div className="mt-8 space-y-3">
-            {["Nutraceutical Ingredients", "Food Ingredients", "Raw Materials"].map((item) => (
+            {["Nutraceutical Raw Materials", "Food Raw Materials"].map((item) => (
               <div key={item} className="rounded-lg bg-gray-50 px-4 py-3 text-sm font-medium text-gray-800">{item}</div>
             ))}
           </div>

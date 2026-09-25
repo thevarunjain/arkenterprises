@@ -10,14 +10,14 @@ export default function Footer() {
             <img src="/ark-logo.png" alt="" aria-hidden="true" className="h-12 w-12 object-contain" />
             <span className="text-lg font-bold">Ark Enterprises</span>
           </div>
-          <p className="text-sm max-w-xs">Reliable industrial supplier serving businesses across India since 2024.</p>
+          <p className="text-sm max-w-xs">Reliable industrial supplier serving businesses across India since 2023.</p>
         </div>
 
         <div className="flex flex-wrap gap-12 text-sm">
           <div>
             <div className="text-white font-medium mb-3">Company</div>
             <ul className="space-y-2">
-              {["About Us", "Contact", "Services", "Certifications", "Gallery"].map((l) => (
+              {["About Us", "Contact", "Services", "Certifications"].map((l) => (
                 <li key={l}><a href={`/#${l === "About Us" ? "about" : l.toLowerCase()}`} className="hover:text-white transition-colors">{l}</a></li>
               ))}
             </ul>
